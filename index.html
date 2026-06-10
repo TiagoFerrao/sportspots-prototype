@@ -411,8 +411,13 @@ body[data-skin="green"] .mapmk{background:#7DE38D;border-color:#00161c;box-shado
 /* mobile top bar (shown only < 560px) */
 .mbar{display:none;align-items:center;justify-content:space-between;gap:10px;flex:none;z-index:30;
   padding:calc(env(safe-area-inset-top,0px) + 9px) 14px 9px;background:var(--bg);border-bottom:1px solid var(--line)}
-.mbar-back{color:var(--c1);text-decoration:none;font-family:var(--font-body);font-weight:700;font-size:13.5px;display:flex;align-items:center;gap:3px;white-space:nowrap}
-.mbar-title{font-family:var(--font-display),sans-serif;font-size:17px;letter-spacing:.04em;color:var(--ink)}
+.mbar{position:relative}
+.mbar-back{display:inline-flex;align-items:center;gap:6px;text-decoration:none;white-space:nowrap;
+  background:var(--grad);color:#0a1410;font-family:var(--font-body);font-weight:800;font-size:13.5px;
+  padding:10px 16px;border-radius:24px;box-shadow:0 8px 20px rgba(0,0,0,.28),0 0 16px var(--grad-soft);position:relative;z-index:2}
+.mbar-back svg{width:15px;height:15px}
+.mbar-back:active{transform:scale(.97)}
+.mbar-title{position:absolute;left:50%;transform:translateX(-50%);font-family:var(--font-display),sans-serif;font-size:16px;letter-spacing:.04em;color:var(--muted)}
 .mbar-skin{border:1px solid var(--line);background:transparent;color:var(--c1);font-family:var(--font-body);font-weight:700;font-size:12px;padding:7px 12px;border-radius:16px;cursor:pointer;white-space:nowrap}
 .mbar-skin:active{background:var(--grad-soft)}
 </style>
@@ -456,7 +461,7 @@ body[data-skin="green"] .mapmk{background:#7DE38D;border-color:#00161c;box-shado
 
     <!-- mobile-only top bar: back to homepage + skin switch -->
     <div class="mbar">
-      <a class="mbar-back" href="https://ferrao.me">&lsaquo; ferrao.me</a>
+      <a class="mbar-back" href="https://ferrao.me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg> ferrao.me</a>
       <span class="mbar-title">SportSpots</span>
       <button class="mbar-skin" id="mbarSkin" onclick="cycleSkin()">▮ green</button>
     </div>
