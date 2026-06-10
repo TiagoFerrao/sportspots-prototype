@@ -403,12 +403,12 @@ body[data-skin="green"] .leaflet-tile-pane{filter:invert(1) sepia(1) hue-rotate(
 body[data-skin="green"] .mapmk{background:#7DE38D;border-color:#00161c;box-shadow:0 0 6px rgba(125,227,141,.6)}
 </style>
 </head>
-<body>
+<body data-skin="green">
 <div class="stage">
   <div class="skin-toggle" role="group" aria-label="Skin switch">
     <span class="st-lbl">skin</span>
-    <button class="st-opt on" data-skin-opt="real" onclick="setSkin('real')">● real brand</button>
-    <button class="st-opt" data-skin-opt="green" onclick="setSkin('green')">▮ green-screen</button>
+    <button class="st-opt" data-skin-opt="real" onclick="setSkin('real')">● real brand</button>
+    <button class="st-opt on" data-skin-opt="green" onclick="setSkin('green')">▮ green-screen</button>
   </div>
 
   <!-- left pitch (hidden on phones) -->
